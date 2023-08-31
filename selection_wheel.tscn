@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://cw6k8nneqllay"]
+
+[ext_resource type="Script" path="res://selection_wheel.gd" id="1_gwn13"]
+[ext_resource type="Texture2D" uid="uid://3xp2mhvk06ux" path="res://tools.png" id="2_16hiu"]
+[ext_resource type="Script" path="res://wheel_option.gd" id="3_5ymkf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vycl"]
+atlas = ExtResource("2_16hiu")
+region = Rect2(0, 0, 32, 32)
+script = ExtResource("3_5ymkf")
+name = "None"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kcyu"]
+atlas = ExtResource("2_16hiu")
+region = Rect2(32, 0, 32, 32)
+script = ExtResource("3_5ymkf")
+name = "Shovel"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dljld"]
+atlas = ExtResource("2_16hiu")
+region = Rect2(64, 0, 32, 32)
+script = ExtResource("3_5ymkf")
+name = "Pick"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klno7"]
+atlas = ExtResource("2_16hiu")
+region = Rect2(96, 0, 32, 32)
+script = ExtResource("3_5ymkf")
+name = "Axe"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5j82"]
+atlas = ExtResource("2_16hiu")
+region = Rect2(128, 0, 32, 32)
+script = ExtResource("3_5ymkf")
+name = "Jug"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krhdl"]
+atlas = ExtResource("2_16hiu")
+region = Rect2(160, 0, 32, 32)
+script = ExtResource("3_5ymkf")
+name = "Pole"
+
+[node name="SelectionWheel" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gwn13")
+bkg_color = Color(0.196078, 0.196078, 0.196078, 1)
+line_color = Color(0.721569, 0.721569, 0.721569, 1)
+highlight_color = Color(0.407843, 0.407843, 0.407843, 1)
+options = Array[ExtResource("3_5ymkf")]([SubResource("AtlasTexture_2vycl"), SubResource("AtlasTexture_2kcyu"), SubResource("AtlasTexture_dljld"), SubResource("AtlasTexture_klno7"), SubResource("AtlasTexture_e5j82"), SubResource("AtlasTexture_krhdl")])
